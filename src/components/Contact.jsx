@@ -11,7 +11,7 @@ const Contact = () => {
     target: ref,
     offset: ["start end", "end start"]
   });
-  
+
   // Parallax translation for the big text
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "30%"]);
 
@@ -35,12 +35,12 @@ const Contact = () => {
     }
 
     // Check if EmailJS is configured (checking both placeholder values and falsy states)
-    const isConfigured = 
-      emailjsConfig.serviceId && 
+    const isConfigured =
+      emailjsConfig.serviceId &&
       emailjsConfig.serviceId !== 'YOUR_EMAILJS_SERVICE_ID' &&
-      emailjsConfig.templateId && 
+      emailjsConfig.templateId &&
       emailjsConfig.templateId !== 'YOUR_EMAILJS_TEMPLATE_ID' &&
-      emailjsConfig.publicKey && 
+      emailjsConfig.publicKey &&
       emailjsConfig.publicKey !== 'YOUR_EMAILJS_PUBLIC_KEY';
 
     if (!isConfigured) {
@@ -75,11 +75,11 @@ const Contact = () => {
   return (
     <section ref={ref} id="contact" className="bg-[#0a0a0a] w-full min-h-screen relative overflow-hidden flex items-end pt-32 pb-0 md:pb-0 border-t border-gray-900">
       {/* Huge Background Text */}
-      <motion.div 
+      <motion.div
         style={{ y }}
         className="absolute top-0 left-0 w-full h-full flex flex-col justify-start items-center overflow-hidden pointer-events-none z-0 pt-16 md:pt-12"
       >
-        <h1 
+        <h1
           className="text-[25vw] leading-[0.75] font-black text-white uppercase tracking-tighter select-none scale-y-[1.6] origin-top"
           style={{ fontFamily: "'Impact', 'Arial Black', sans-serif" }}
         >
@@ -89,7 +89,7 @@ const Contact = () => {
 
       {/* Form Card Overlay */}
       <div className="relative z-10 w-full flex justify-end items-end">
-        <div 
+        <div
           data-aos="fade-up"
           className="bg-[#2563eb] w-full md:w-[85%] lg:w-[75%] p-8 md:p-16 text-white flex flex-col justify-between"
         >
@@ -98,10 +98,10 @@ const Contact = () => {
               Reach Me
             </div>
             {/* LinkedIn Quick Link */}
-            <a 
-              href={socialLinks.linkedin} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={socialLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-xs font-black uppercase tracking-wider bg-white/10 hover:bg-white hover:text-[#2563eb] border border-white/20 px-4 py-2 rounded-full transition-all duration-300"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
@@ -114,30 +114,30 @@ const Contact = () => {
               {/* Left Column */}
               <div className="flex-1 flex flex-col gap-10">
                 <div className="relative">
-                  <input 
-                    type="text" 
-                    id="firstName" 
+                  <input
+                    type="text"
+                    id="firstName"
                     name="first_name"
-                    placeholder="First Name" 
+                    placeholder="First Name"
                     required
                     className="w-full bg-transparent border-b border-white/40 pb-3 text-lg focus:outline-none focus:border-white transition-colors placeholder-white font-medium rounded-none"
                   />
                 </div>
                 <div className="relative">
-                  <input 
-                    type="text" 
-                    id="lastName" 
+                  <input
+                    type="text"
+                    id="lastName"
                     name="last_name"
-                    placeholder="Last Name" 
+                    placeholder="Last Name"
                     className="w-full bg-transparent border-b border-white/40 pb-3 text-lg focus:outline-none focus:border-white transition-colors placeholder-white font-medium rounded-none"
                   />
                 </div>
                 <div className="relative">
-                  <input 
-                    type="email" 
-                    id="email" 
+                  <input
+                    type="email"
+                    id="email"
                     name="user_email"
-                    placeholder="Email" 
+                    placeholder="Email"
                     required
                     className="w-full bg-transparent border-b border-white/40 pb-3 text-lg focus:outline-none focus:border-white transition-colors placeholder-white font-medium rounded-none"
                   />
@@ -147,10 +147,10 @@ const Contact = () => {
               {/* Right Column */}
               <div className="flex-1 flex flex-col">
                 <div className="relative h-full flex flex-col">
-                  <textarea 
-                    id="message" 
+                  <textarea
+                    id="message"
                     name="message"
-                    placeholder="Type your message here" 
+                    placeholder="Type your message here"
                     required
                     className="w-full h-full min-h-[120px] bg-transparent border-b border-white/40 pb-3 text-lg focus:outline-none focus:border-white transition-colors placeholder-white font-medium resize-none rounded-none"
                   ></textarea>
@@ -162,10 +162,10 @@ const Contact = () => {
             <div className="flex flex-col md:flex-row gap-12 mt-4">
               {/* Left text */}
               <div className="flex-1 flex items-start gap-4 text-sm font-medium text-white/90">
-                <input 
-                  type="checkbox" 
-                  id="permission" 
-                  className="mt-1 w-4 h-4 rounded-sm border-white/40 bg-transparent text-white focus:ring-white focus:ring-offset-0 focus:ring-offset-transparent cursor-pointer" 
+                <input
+                  type="checkbox"
+                  id="permission"
+                  className="mt-1 w-4 h-4 rounded-sm border-white/40 bg-transparent text-white focus:ring-white focus:ring-offset-0 focus:ring-offset-transparent cursor-pointer"
                   style={{ accentColor: "white" }}
                 />
                 <label htmlFor="permission" className="cursor-pointer max-w-[280px] leading-snug">
@@ -182,19 +182,18 @@ const Contact = () => {
                   <p className="max-w-[250px] leading-relaxed">
                     For urgent inquiries, reach me at <a href={`mailto:${personalInfo.emails.primary}`} className="underline hover:text-white transition-colors">{personalInfo.emails.primary}</a>
                   </p>
-                  
-                  <button 
-                    type="submit" 
+
+                  <button
+                    type="submit"
                     disabled={status === 'sending'}
-                    className={`px-8 py-3 rounded-full border border-white/40 text-white font-bold flex items-center justify-center gap-3 transition-all duration-300 group whitespace-nowrap self-start sm:self-auto ${
-                      status === 'sending' 
-                        ? 'opacity-50 cursor-not-allowed bg-white/10' 
+                    className={`px-8 py-3 rounded-full border border-white/40 text-white font-bold flex items-center justify-center gap-3 transition-all duration-300 group whitespace-nowrap self-start sm:self-auto ${status === 'sending'
+                        ? 'opacity-50 cursor-not-allowed bg-white/10'
                         : status === 'success'
-                        ? 'bg-green-600 border-green-500 text-white shadow-[0_0_20px_rgba(22,163,74,0.4)]'
-                        : status === 'error'
-                        ? 'bg-red-800 border-red-700 text-white'
-                        : 'hover:bg-white hover:text-[#2563eb]'
-                    }`}
+                          ? 'bg-green-600 border-green-500 text-white shadow-[0_0_20px_rgba(22,163,74,0.4)]'
+                          : status === 'error'
+                            ? 'bg-red-800 border-red-700 text-white'
+                            : 'hover:bg-white hover:text-[#2563eb]'
+                      }`}
                   >
                     {status === 'sending' ? (
                       <span className="flex items-center gap-2">
@@ -213,7 +212,7 @@ const Contact = () => {
                         Failed — Try Again
                       </span>
                     ) : 'Send Message'}
-                    
+
                     {status === 'idle' && (
                       <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
