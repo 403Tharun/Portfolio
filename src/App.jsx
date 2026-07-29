@@ -1,4 +1,5 @@
 import React from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Preloader from './components/Preloader'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -31,6 +32,7 @@ function App() {
       <SoftSkills />
       <Contact />
       <Footer />
+      <Analytics />
     </>
   )
 }
